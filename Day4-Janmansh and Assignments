@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T; // number of test cases
+    cin >> T;
+
+    while (T--) {
+        int X; // start time for each test case
+        cin >> X;
+
+        // He needs 3 hours to complete all assignments
+        if (X + 3 <= 10) {
+            cout << "Yes" << endl;
+        } else {
+            cout << "No" << endl;
+        }
+    }
+
+    return 0;
+}
