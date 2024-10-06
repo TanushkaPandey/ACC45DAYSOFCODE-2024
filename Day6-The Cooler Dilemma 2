@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;  // Number of test cases
+    cin >> T;
+    
+    while (T--) {
+        long long X, Y;  // X: cost per month, Y: cost of purchasing the cooler
+        cin >> X >> Y;
+        
+        // Calculate the maximum months of renting such that m * X < Y
+        if (X >= Y) {
+            cout << 0 << endl;  // Renting for even 1 month is not less than purchasing
+        } else {
+            cout << (Y - 1) / X << endl;  // Maximum months to rent
+        }
+    }
+    
+    return 0;
+}
