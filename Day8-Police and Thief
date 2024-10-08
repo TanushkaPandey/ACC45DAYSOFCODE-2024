@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int T;  // Number of test cases
+    cin >> T;
+
+    while (T--) {
+        int X, Y;  // Initial positions of the policeman and thief
+        cin >> X >> Y;
+
+        // If both start at the same position, the time is 0.
+        if (X == Y) {
+            cout << 0 << endl;
+        } else {
+            // Calculate the distance between the policeman and thief.
+            int distance = abs(X - Y);
+
+            // The relative speed between the policeman and thief is 2 - 1 = 1 unit per second.
+            // Time to catch the thief is distance / 1 = distance.
+            cout << distance << endl;
+        }
+    }
+
+    return 0;
+}
